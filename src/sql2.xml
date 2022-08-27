@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mybatisGroup id="预置数据语句">
+    <del_1 id="del_1" type="delete">
+        delete from t_admin_user WHERE user_name = 'testuser';
+    </del_1>
+    <del_2 id="del_2" type="delete">
+        delete from t_admin_user WHERE user_name = 'testuser2';
+    </del_2>
+    <insert_1 id="insert_1" type="insert">
+        insert into `t_admin_user` (`id`, `user_name`, `user_password`, `del_flag`, `create_time`, `update_time`)
+        VALUES( null,'testuser','testuser123','0','2019-01-21 19:43:58','2019-01-22 19:44:03');
+    </insert_1>
+
+    <del_group>
+        <statement>
+            delete from t_admin_user WHERE user_name = 'testuser';
+        </statement>
+        <statement>
+            delete from t_admin_user WHERE user_name = 'testuser2';
+        </statement>
+    </del_group>
+
+    <del_group_2>
+        <del_1>
+            delete from t_admin_user WHERE user_name = 'testuser';
+        </del_1>
+        <del_2>
+            delete from t_admin_user WHERE user_name = 'testuser2';
+        </del_2>
+        <del_3>
+            delete from t_admin_user WHERE user_name = 'testuser3';
+        </del_3>
+    </del_group_2>
+
+</mybatisGroup>
