@@ -73,7 +73,7 @@ public class douyinLogin {
         String loginXpath = "//*[@id='qdblhsHs']/button";
         String mima = "//*[@class='web-login-tab-list__item'][text()='密码登录']";
         WebElement wl = webDriver.findElement(By.xpath(loginXpath));
-        if (a.isExistElement(webDriver,mima)) {
+        if (a.isElementExist(webDriver,By.xpath(mima),5)) {
             logger.info("登录窗口已存在，直接登录操作……");
 
         }
