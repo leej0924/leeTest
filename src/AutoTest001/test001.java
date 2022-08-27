@@ -25,7 +25,7 @@ public class test001 {
     @Test
     public void run() throws Exception {
 
-        // 获取
+        // 获取xml信息
         String path2 = "/Users/xlee/IdeaProjects/AutoTest/src/sql2.xml";
         String s = commonUtils.getElementText(path2, "insert_1");
         logger.info(s);
