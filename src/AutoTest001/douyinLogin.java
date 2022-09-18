@@ -11,6 +11,7 @@ import static java.lang.Thread.sleep;
 public class douyinLogin {
     static Logger logger = Logger.getLogger(Log.class);
     otherOperate a = new otherOperate();
+    CommonUtils commonUtils = new CommonUtils();
 
     public void addExpression(int num) throws Exception {
 
@@ -46,10 +47,6 @@ public class douyinLogin {
             logger.info(arry[1]);
         }
 
-
-    }
-
-    public void openChrome() {
 
     }
 
@@ -98,7 +95,7 @@ public class douyinLogin {
         webDriver.findElement(By.xpath("//*[@placeholder='请输入密码']")).sendKeys(VfCode);
         sleep(1000);
         logger.info("点击登陆按钮");
-        webDriver.findElement(By.xpath("//*[@class=\"web-login-button\"][text()='登录']")).click();
+        webDriver.findElement(By.xpath(commonUtils.getXmlInfo("login"))).click();
         sleep(1000);
     }
 }

@@ -24,6 +24,10 @@ public class CommonUtils {
         return info;
     }
 
+    /**
+     * xml配置文件信息获取
+     */
+
 
     public static Document readXml(String filePath) throws DocumentException {
         return readXml(new File(filePath));
@@ -89,6 +93,13 @@ public class CommonUtils {
             list.add(e.getTextTrim());
         }
         return list;
+    }
+
+    // 返回xml文件信息
+    public String getXmlInfo(String type) throws Exception {
+        String path2 = "/Users/xlee/IdeaProjects/AutoTest/src/douyinLogin.xml";
+        String info = getElementText(path2, type);
+        return info;
     }
 
 

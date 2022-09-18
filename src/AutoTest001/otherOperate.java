@@ -8,6 +8,8 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import static java.lang.Thread.sleep;
+
 public class otherOperate {
     static org.apache.log4j.Logger logger = Logger.getLogger(Log.class);
 
@@ -39,6 +41,26 @@ public class otherOperate {
         }
 
     }
+
+
+    // 点击
+    public static void click(WebElement element){
+        element.click();
+    }
+
+    // 输入
+    public static void clearAndSendkeys(WebElement element,String value) throws Exception {
+        element.clear();
+        sleep(1000);
+        element.sendKeys(value);
+    }
+
+    // element方法
+    public static WebElement getElement (String xpath, WebDriver driver){
+        WebElement webElement = driver.findElement (By.xpath(xpath));
+        return webElement;
+    }
+
 
 
 }

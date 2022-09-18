@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mybatisGroup page="抖音登录界面">
+    <login id="login" type="xpath">
+        //*[@class="web-login-button"][text()='登录']
+    </login>
+
+</mybatisGroup>
